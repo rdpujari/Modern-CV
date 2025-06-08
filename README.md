@@ -6,7 +6,7 @@
 
 ## A modern curriculum vitae class for LaTeX
 
-The `moderncv` package provides a document class for typesetting applications (curricula vitae and cover letters) in various styles. `moderncv` aims to be both straightforward to use and customizable, providing five ready-made styles (classic, casual, banking, oldstyle and fancy) and allowing you to define your own by modifying colors, fonts, icons, etc.
+The `moderncv` package provides a document class for typesetting applications (curricula vitae and cover letters) in various styles. `moderncv` aims to be both straightforward to use and customizable, providing six ready-made styles (classic, casual, banking, oldstyle, fancy and contemporary) and allowing you to define your own by modifying colors, fonts, icons, etc.
 
 ## Getting started
 
