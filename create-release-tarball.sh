@@ -8,11 +8,14 @@ TARBALL=moderncv-$VERSION.tar
 # remove existing tarballs
 rm -f $TARBALL $TARBALL.gz
 
-# create tar with all files in git repo
-git archive --prefix=moderncv/ HEAD > $TARBALL
-
-# remove git specific files
-tar -f $TARBALL --delete moderncv/.github/ moderncv/.gitignore moderncv/create-release-tarball.sh
+# create tar with all files in git repo excluding helper files
+git archive \
+  --prefix=moderncv/ \
+  --output=$TARBALL \
+  --exclude=.github \
+  --exclude=.gitignore \
+  --exclude=create-release-tarball.sh \
+  HEAD
 
 # compress
 gzip $TARBALL
