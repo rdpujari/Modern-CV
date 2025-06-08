@@ -234,7 +234,7 @@
 \newcommand*{\born}[1]{\def\@born{#1}}
 
 % defines one's email (optional)
-% usage: \email{<email adress>}
+% usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
 
 % defines one's home page (optional)

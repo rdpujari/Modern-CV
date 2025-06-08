@@ -121,7 +121,7 @@
 %         and actually yield a decent looking table. The defaults depend on the style used and are chosen reasonably.
 %         However, depending on the user input and the style that is used some of the columns might need adjustments.
 %         The \setcvskillcolumns command provides means to influence the width of the first, the third and the fourth
-%         skill matrix column. The second column containg the output of \cvskill remains fixed width. The last column,
+%         skill matrix column. The second column containing the output of \cvskill remains fixed width. The last column,
 %         the comment column gets recalculated according to the setting of the other columns.
 %
 %         Input
@@ -137,12 +137,12 @@
 %             \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
 %             \setcvskillcolumns[][][\widthof{``Year''}]%     adjust fourth (years) column.
 %             \setcvskillcolumns[\widthof{``Language''}][0.48][]%     adjust 1st and 3rd columns. Same as \setcvskillcolumns[\widthof{``Language''}][0.45]
-%             \setcvskillcolumns[\widthof{``Management Tools''}][0.6][3em]%   ajust all at once.
+%             \setcvskillcolumns[\widthof{``Management Tools''}][0.6][3em]%   adjust all at once.
 %
 %         Note
 %             - For the styles 'classic' and 'casual' the first column is set to hintscolumnwidth such that
-%                 it aligns with the rest of the entries. A readjustment of the first column should therefor
-%                 be avoided. It is recomended to only use \setcvskillcolumns in the form of
+%                 it aligns with the rest of the entries. A readjustment of the first column should therefore
+%                 be avoided. It is recommended to only use \setcvskillcolumns in the form of
 %                 \setcvskillcolumns[][<factor>][<width>], thereby leaving the defaults in place for the first column.
 %
 %
@@ -153,7 +153,7 @@
 %         such that the default english and german examples look good.
 %         However, depending on the user input (translation) and the style that is used some adjustment might be needed.
 %         The \setcvskilllegendcolumns command provides means to influence all columns except the ones containing
-%         \cvskill commands. The second column containg the output of \cvskill remains fixed width. The last column,
+%         \cvskill commands. The second column containing the output of \cvskill remains fixed width. The last column,
 %         the comment column gets recalculated according to the setting of the other columns.
 %
 %         Input
@@ -161,25 +161,25 @@
 %                                     where depending on the style the legend_string gets printed. In case the
 %                                     string is left empty adjusting this width allows moving the legend horizontally.
 %                                     Default <\skilllegend@hintscolumnwidth>
-%             Input_2 (optional):     float between 0 and 1 influencing the width of the left legend descritor column,
-%                                     aka \cvskilllegend@leftdescriptorwidth. The desriptor column on the right,
+%             Input_2 (optional):     float between 0 and 1 influencing the width of the left legend descriptor column,
+%                                     aka \cvskilllegend@leftdescriptorwidth. The descriptor column on the right,
 %                                     \cvskilllegend@rightdescriptorwidth is influenced by the factor 1-<factor>.
-%                                     Default <\skilllegend@leftdesriptorfactor>
+%                                     Default <\skilllegend@leftdescriptorfactor>
 %
 %         Example usage
-%             \setcvskilllegendcolumns[][0.45]%%    adjust left desriptor column.
+%             \setcvskilllegendcolumns[][0.45]%%    adjust left descriptor column.
 %             \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]%   adjust both left descriptor column and string column
 %
 %         Note
 %             - Due to implementation of \cvskilllegend for style 'fancy' (moderncvbodyv)
 %                 the first optional variable has no effect in this case.
 %             - For the styles 'classic' and 'casual' the first column is set to hintscolumnwidth such that
-%                 it aligns with the rest of the entries. A readjustment of the first column should therefor
-%                 be avoided. It is recomended to only use \cvskilllegend in the form of
+%                 it aligns with the rest of the entries. A readjustment of the first column should therefore
+%                 be avoided. It is recommended to only use \cvskilllegend in the form of
 %                 \cvskilllegend[][<factor>], thereby leaving the defaults in place for the first column.
 %             - For style 'banking' the first column is set to align with the rest of the \cvskillentry entries
-%                 Therefor adjusting the first column can be used to widen the table while moving it around. If no
-%                 legend string is used, setting \cvskilllegend[0em] maximises the real enstate for the legend.
+%                 Therefore adjusting the first column can be used to widen the table while moving it around. If no
+%                 legend string is used, setting \cvskilllegend[0em] maximises the real estate for the legend.
 %
 %
 % PRIVATE COMMANDS
@@ -298,7 +298,7 @@
     \setlength{\separatorrulewidth}{1ex}
 \fi
 
-\DeclareDocumentCommand{\skilllegend@leftdesriptorfactor}{}{}%
+\DeclareDocumentCommand{\skilllegend@leftdescriptorfactor}{}{}%
 %% DEFINITION \recompute@cvskillmatrix@lengths
 % declare the command \recompute@cvskillmatrix@lengths empty
 \DeclareDocumentCommand{\recompute@cvskillmatrix@lengths}{}{}%
@@ -326,7 +326,7 @@
         \setlength{\skilllegend@padding}{0.25ex}%
         \setlength{\skilllegend@hintscolumnwidth}{\hintscolumnwidth}%
         \setlength{\skilllegend@bodylength}{\skillmatrix@bodylength}%
-        \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{0.5}%
+        \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{0.5}%
     }
 \fi
 % Definition of \recompute@cvskillmatrix@lengths for moderncvbodyiii
@@ -346,7 +346,7 @@
         \setlength{\skilllegend@padding}{0.25ex}%
         \setlength{\skilllegend@hintscolumnwidth}{\skillmatrix@hintscolumnwidth}%
         \setlength{\skilllegend@bodylength}{\skillmatrix@bodylength}%
-        \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{0.5}%
+        \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{0.5}%
     }
 \fi
 % Definition of \recompute@cvskillmatrix@lengths for moderncvbodyiv
@@ -366,7 +366,7 @@
         \setlength{\skilllegend@padding}{0.25ex}
         \setlength{\skilllegend@hintscolumnwidth}{0ex}%\skillmatrix@hintscolumnwidth
         \setlength{\skilllegend@bodylength}{\maincolumnwidth}
-        \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{0.45}%
+        \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{0.45}%
     }
 \fi
 % Definition of \recompute@cvskillmatrix@lengths for moderncvbodyv
@@ -385,7 +385,7 @@
         \setlength{\skilllegend@padding}{0.25ex}%
         \setlength{\skilllegend@hintscolumnwidth}{\skillmatrix@hintscolumnwidth}%
         \setlength{\skilllegend@bodylength}{\maincolumnwidth}%
-        \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{0.48}%
+        \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{0.48}%
     }%
 \fi
 
@@ -401,7 +401,7 @@
 %   and actually yield a decent looking table. The defaults depend on the style used and are chosen reasonably.
 %   However, depending on the user input and the style that is used some of the columns might need adjustments.
 %   The \setcvskillcolumns command provides means to influence the width of the first, the third and the fourth
-%   skill matrix column. The second column containg the output of \cvskill remains fixed width. The last column,
+%   skill matrix column. The second column containing the output of \cvskill remains fixed width. The last column,
 %   the comment column gets recalculated according to the setting of the other columns.
 %
 %   Input
@@ -417,12 +417,12 @@
 %       \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
 %       \setcvskillcolumns[][][\widthof{``Year''}]%     adjust fourth (years) column.
 %       \setcvskillcolumns[\widthof{``Language''}][0.48][]%     adjust 1st and 3rd columns. Same as \setcvskillcolumns[\widthof{``Language''}][0.45]
-%       \setcvskillcolumns[\widthof{``Management Tools''}][0.6][3em]%   ajust all at once.
+%       \setcvskillcolumns[\widthof{``Management Tools''}][0.6][3em]%   adjust all at once.
 %
 %   Note
 %       - For the styles 'classic' and 'casual' the first column is set to hintscolumnwidth such that
-%         it aligns with the rest of the entries. A readjustment of the first column should therefor
-%         be avoided. It is recomended to only use \setcvskillcolumns in the form of
+%         it aligns with the rest of the entries. A readjustment of the first column should therefore
+%         be avoided. It is recommended to only use \setcvskillcolumns in the form of
 %         \setcvskillcolumns[][<factor>][<width>], thereby leaving the defaults in place for the first column.
 %
     \def\arg@new@hintscolumnwidth{#1}% <-- all these terminal % signs are necessary for the fancy style to not show weird spaces!!!
@@ -495,14 +495,14 @@
 }%
 %
 % \setcvskilllegendcolumns[<width>][<factor>]
-\DeclareDocumentCommand{\setcvskilllegendcolumns}{+O{\skilllegend@hintscolumnwidth} +O{\skilllegend@leftdesriptorfactor}}{%
+\DeclareDocumentCommand{\setcvskilllegendcolumns}{+O{\skilllegend@hintscolumnwidth} +O{\skilllegend@leftdescriptorfactor}}{%
 %   adjust column width of legend
 %
 %   The \cvskilllegend command comes with default FIXED width definitions for the columns of the legend matrix
 %   such that the default english and german examples look good.
 %   However, depending on the user input (translation) and the style that is used some adjustment might be needed.
 %   The \setcvskilllegendcolumns command provides means to influence all columns except the ones containing
-%   \cvskill commands. The second column containg the output of \cvskill remains fixed width. The last column,
+%   \cvskill commands. The second column containing the output of \cvskill remains fixed width. The last column,
 %   the comment column gets recalculated according to the setting of the other columns.
 %
 %   Input
@@ -510,25 +510,25 @@
 %                               where depending on the style the legend_string gets printed. In case the
 %                               string is left empty adjusting this width allows moving the legend horizontally.
 %                               Default <\skilllegend@hintscolumnwidth>
-%       Input_2 (optional):     float between 0 and 1 influencing the width of the left legend descritor column,
-%                               aka \cvskilllegend@leftdescriptorwidth. The desriptor column on the right,
+%       Input_2 (optional):     float between 0 and 1 influencing the width of the left legend descriptor column,
+%                               aka \cvskilllegend@leftdescriptorwidth. The descriptor column on the right,
 %                               \cvskilllegend@rightdescriptorwidth is influenced by the factor 1-<factor>.
-%                               Default <\skilllegend@leftdesriptorfactor>
+%                               Default <\skilllegend@leftdescriptorfactor>
 %
 %   Example usage
-%       \setcvskilllegendcolumns[][0.45]%%    adjust left desriptor column.
+%       \setcvskilllegendcolumns[][0.45]%%    adjust left descriptor column.
 %       \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]%   adjust both left descriptor column and string column
 %
 %   Note
 %       - Due to implementation of \cvskilllegend for style 'fancy' (moderncvbodyv)
 %         the first optional variable has no effect in this case.
 %       - For the styles 'classic' and 'casual' the first column is set to hintscolumnwidth such that
-%         it aligns with the rest of the entries. A readjustment of the first column should therefor
-%         be avoided. It is recomended to only use \cvskilllegend in the form of
+%         it aligns with the rest of the entries. A readjustment of the first column should therefore
+%         be avoided. It is recommended to only use \cvskilllegend in the form of
 %         \cvskilllegend[][<factor>], thereby leaving the defaults in place for the first column.
 %       - For style 'banking' the first column is set to align with the rest of the \cvskillentry entries
-%         Therefor adjusting the first column can be used to widen the table while moving it around. If no
-%         legend string is used, setting \cvskilllegend[0em] maximises the real enstate for the legend.
+%         Therefore adjusting the first column can be used to widen the table while moving it around. If no
+%         legend string is used, setting \cvskilllegend[0em] maximises the real estate for the legend.
 %
     \def\arg@new@legend@hintscolumnwidth{#1}%
     \def\arg@new@legend@leftDescriptorFactor{#2}%
@@ -539,7 +539,7 @@
 %             % Case \setcvskilllegendcolumns[][] do nothing here, i.e. leave default values unaltered
         }{%
             % Case \setcvskilllegendcolumns[][<somefactor>], \setcvskilllegendcolumns[][<somefactor>]
-            \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{\arg@new@legend@leftDescriptorFactor}%
+            \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{\arg@new@legend@leftDescriptorFactor}%
         }%
 %         % Case \setcvskilllegendcolumns[] nothing needs to be done here i.e. leave default values unaltered
     }{%
@@ -560,7 +560,7 @@
             % Case \setcvskilllegendcolumns[<width>][] do nothing here and leave default values unaltered
         }{%
             % Case \setcvskilllegendcolumns, \setcvskilllegendcolumns[<width>], \setcvskilllegendcolumns[<width>][<somefactor>]
-            \RenewDocumentCommand{\skilllegend@leftdesriptorfactor}{}{\arg@new@legend@leftDescriptorFactor}%
+            \RenewDocumentCommand{\skilllegend@leftdescriptorfactor}{}{\arg@new@legend@leftDescriptorFactor}%
         }%
     }%
 }%
@@ -608,8 +608,8 @@
         \begingroup%
             \arrayrulecolor{bodyrulecolor}%
             % calculate descriptor widths
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
             \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}%
                             @{\hspace{\separatorcolumnwidth}}%
                             p{\cvskill@width}@{\hspace{\skilllegend@padding}};{.6pt/1pt}%%
@@ -628,8 +628,8 @@
         % if no star is given, do not add dashed line. We need less padding in this case
         \begingroup%
             % calculate descriptor columns width. note the adjusted padding
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-1\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-1\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-1\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-1\skilllegend@padding}%
             \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}%
                             @{\hspace{\separatorcolumnwidth}}%
                             p{\cvskill@width}@{\hspace{\skilllegend@padding}}%
@@ -658,8 +658,8 @@
             \begingroup%
                 % recalculate desrciptor widths on the fly. Allows for different padding
                 % in the stared and nonstared case
-                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
-                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
+                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
+                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
                 \arrayrulecolor{bodyrulecolor}
                 \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}
                                 @{\hspace{\separatorcolumnwidth}}p{\cvskill@width}@{\hspace{\skilllegend@padding}};{.6pt/1pt}%
@@ -676,10 +676,10 @@
             \endgroup%
             \par\addvspace{#2}}{
             \begingroup%
-                % oddly enough, we should only need to subtract 2 paddings in the descritorwidths.
+                % oddly enough, we should only need to subtract 2 paddings in the descriptorwidths.
                 % but while testing I got overflow of text into the margin
-                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
-                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-5\skilllegend@padding}%
+                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
+                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-5\skilllegend@padding}%
                 \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}
                                 @{\hspace{\separatorcolumnwidth}}p{\cvskill@width}@{\hspace{2\skilllegend@padding}}%
                                 p{\cvskilllegend@leftdescriptorwidth}@{\hspace{2\skillmatrix@padding}}%
@@ -711,8 +711,8 @@
         \setlength\arrayrulewidth{\separatorrulewidth}%
         \RenewDocumentCommand{\@starIndependentTabular}{}{%
             \begingroup%
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
 %             \renewcommand{\arraystretch}{1.0}%
             \begin{tabular}[t]{@{}p{\hintscolumnwidth}%\skilllegend@hintscolumnwidth
                     @{\hspace{\separatorcolumnwidth}}|@{\hspace{\separatorcolumnwidth}}%
@@ -778,8 +778,8 @@
         \begingroup%
             \arrayrulecolor{bodyrulecolor}%
             % calculate descriptor widths
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
             \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}%
                             @{\hspace{\separatorcolumnwidth}}%
                             p{\cvskill@width}@{\hspace{\skilllegend@padding}};{.6pt/1pt}%%
@@ -798,8 +798,8 @@
         % if no star is given, do not add dashed line
         \begingroup%
             % calculate descriptor widths, note that we use less padding
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
             \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}%
                             @{\hspace{\separatorcolumnwidth}}%
                             p{\cvskill@width}@{\hspace{2\skilllegend@padding}}%
@@ -827,8 +827,8 @@
         \IfBooleanTF#1{% if a star is given, add dashed line
             \begingroup%
                 \arrayrulecolor{bodyrulecolor}
-                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-6\skilllegend@padding}%
-                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-6\skilllegend@padding}%
+                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-6\skilllegend@padding}%
+                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-6\skilllegend@padding}%
                 \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}
                                 @{\hspace{\separatorcolumnwidth}}p{\cvskill@width}@{\hspace{\skilllegend@padding}};{.6pt/1pt}%
                                 p{2\skilllegend@padding}%
@@ -845,8 +845,8 @@
             \par\addvspace{#2}}{
             % if no star is given, do not add dashed line
             \begingroup
-                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
-                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
+                \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-3\skilllegend@padding}%
+                \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-4\skilllegend@padding}%
                 \begin{tabular}{@{}p{\skilllegend@hintscolumnwidth}
                                 @{\hspace{\separatorcolumnwidth}}p{\cvskill@width}@{\hspace{\skilllegend@padding}}%
                                 p{\cvskilllegend@leftdescriptorwidth}@{\hspace{2\skillmatrix@padding}}%
@@ -878,8 +878,8 @@
         \RenewDocumentCommand{\@starIndependentTabular}{}{%
             \begingroup%
 %             \renewcommand{\arraystretch}{1.0}%
-            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
-            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdesriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
+            \setlength{\cvskilllegend@leftdescriptorwidth}{\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
+            \setlength{\cvskilllegend@rightdescriptorwidth}{\skilllegend@bodylength-\skilllegend@leftdescriptorfactor\skilllegend@bodylength-\cvskill@width-\skillmatrix@padding-2\skilllegend@padding}%
             \begin{tabular}[t]{@{}p{\hintscolumnwidth}%\skilllegend@hintscolumnwidth
                     @{\hspace{\separatorcolumnwidth}}|@{\hspace{\separatorcolumnwidth}}%
                     p{\cvskill@width}@{\hspace{2\skilllegend@padding}}%
