@@ -33,3 +33,19 @@ jobs:
         with:
           name: template.log
           path: ./template.log
+
+      - name: Build user guide
+        run: latexmk -pdflua manual/moderncv_userguide.tex
+
+      - name: Upload user guide pdf
+        uses: actions/upload-artifact@v4
+        with:
+          name: moderncv_userguide.pdf
+          path: manual/moderncv_userguide.pdf
+
+      - name: Upload user guide log
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: moderncv_userguide.log
+          path: manual/moderncv_userguide.log
